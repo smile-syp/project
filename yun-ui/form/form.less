@@ -1,0 +1,76 @@
+@import '../../global/_mixin';
+
+.ftm-form {
+    background: var(--ftm-bg-color);
+    &&__card {
+        padding: 0 .rem(20)[@rem];
+    }
+    &-header {
+        background: transparent;
+        padding: .rem(8)[@rem] .rem(10)[@rem] 0;
+        + .ftm-form-field {
+            border: 0;
+        }
+        &__title {
+            font-size: .rem(14)[@rem];
+            color: var(--ftm-color-title);
+            padding: .rem(10)[@rem] 0;
+        }
+    }
+    &-field {
+        border-top: 1px solid var(--ftm-border-color);
+        background: var(--ftm-color-white);
+        padding: .rem(16)[@rem];
+        &-content {
+            &__label {
+                font-size: .rem(14)[@rem];
+                color: var(--ftm-color-light);
+                position: relative;
+                .is-required {
+                    position: absolute;
+                    left: .rem(-2)[@rem];
+                    transform: translateX(-100%);
+                    color: var(--ftm-color-primary);
+                }
+            }
+            &__control {
+                margin-top: .rem(8)[@rem];
+            }
+        }
+        &__horizontal {
+            .ftm-form-field-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &__label {
+                    flex-shrink: 0;
+                    margin-right: .rem(25)[@rem];
+                }
+                &__control {
+                    margin-top: 0;
+                    flex-grow: 1;
+                }
+            }
+        }
+        &__suffix {
+            margin-top: .rem(10)[@rem];
+            color: var(--ftm-color-light);
+            font-size: .rem(12)[@rem];
+        }
+    }
+    &-field__error {
+        font-size: .rem(12)[@rem];
+        color: var(--ftm-color-primary);
+        line-height: .rem(14)[@rem];
+        margin-top: .rem(8)[@rem];
+    }
+}
+
+
+
+
+
+
+
+
+
